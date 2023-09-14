@@ -4,11 +4,11 @@ import Header from "@/components/Header";
 import Button from "@/components/Button";
 import { GameContextProvider } from "@/app/context/GameContext";
 
-export const metadata = {
-  title: "Frontend Mentor | Rock, Paper, Scissors, Lizard, Spock",
-  description:
-    "Rock papers scissors lizard spock game. advanced challenge from frontend mentor",
-};
+// export const metadata = {
+//   title: "Frontend Mentor | Rock, Paper, Scissors, Lizard, Spock",
+//   description:
+//     "Rock papers scissors lizard spock game. advanced challenge from frontend mentor",
+// };
 
 export default function RootLayout({ children }) {
   return (
