@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --background-start-rgb: hsl(214, 47%, 23%);
+  --background-end-rgb: hsl(237, 49%, 15%);
+
+  --shadow-home-dice: 5px;
+  --shadow-home-wrapper: -4px;
+
+  --shadow-picked-dice: 6px;
+  --shadow-picked-wrapper: -6px;
+}
+
+body {
+  background-image: radial-gradient(
+    circle at center 100px,
+    var(--background-start-rgb),
+    var(--background-end-rgb)
+  );
+  background-repeat: no-repeat;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+@layer utilities {
+  .dice {
+    overflow: visible !important;
+    @apply bg-white rounded-full cursor-pointer;
+  }
+
+  .home-dice {
+    box-shadow: inset 0px var(--shadow-home-dice) #0003;
+    -webkit-box-shadow: inset 0px var(--shadow-home-dice) #0003;
+    @apply w-[70px] sm:w-[80px] md:w-[100px] h-[70px] sm:h-[80px] md:h-[100px] p-[19px] md:p-[30px];
+  }
+
+  .picked-dice {
+    box-shadow: inset 0px var(--shadow-picked-dice) #0003;
+    -webkit-box-shadow: inset 0px var(--shadow-picked-dice) #0003;
+    @apply w-[100px] sm:w-[130px] sm:h-[130px] h-[100px] md:w-[210px] md:h-[210px] p-[25px] sm:p-[30px] md:p-[55px];
+  }
+
+  .home-wrapper {
+    box-shadow: 0px var(--shadow-home-wrapper) #0004 inset;
+    -webkit-box-shadow: 0px var(--shadow-home-wrapper) #0004 inset;
+    @apply absolute p-[12px] sm:p-[15px] md:p-[17px] rounded-full z-10;
+  }
+
+  .picked-wrapper {
+    box-shadow: 0px var(--shadow-picked-wrapper) #0004 inset;
+    -webkit-box-shadow: 0px var(--shadow-picked-wrapper) #0004 inset;
+    @apply w-max p-[17px] sm:p-[20px] md:p-[35px] rounded-full;
+  }
+
+  .shadow {
+    -webkit-box-shadow: 0 0 0 20px #2b3956, 0 0 0 45px #253453,
+      0 0 0 70px #202f4e;
+    box-shadow: 0 0 0 20px #2b3956, 0 0 0 45px #253453, 0 0 0 70px #202f4e;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .shadow {
+    -webkit-box-shadow: 0 0 0 30px #2b3956, 0 0 0 65px #253453,
+      0 0 0 100px #202f4e;
+    box-shadow: 0 0 0 30px #2b3956, 0 0 0 65px #253453, 0 0 0 100px #202f4e;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  :root {
+    --shadow-home-dice: 7px;
+    --shadow-home-wrapper: -6px;
+
+    --shadow-picked-dice: 10px;
+    --shadow-picked-wrapper: -12px;
+  }
+
+  .shadow {
+    -webkit-box-shadow: 0 0 0 65px #2b3956, 0 0 0 140px #253453,
+      0 0 0 220px #202f4e;
+    box-shadow: 0 0 0 65px #2b3956, 0 0 0 140px #253453, 0 0 0 220px #202f4e;
+  }
+}
+
+.dice {
+  color: #2c3042;
+}
