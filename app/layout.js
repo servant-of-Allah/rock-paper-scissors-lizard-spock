@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 
           <main>{children}</main>
 
-          <footer className="w-full">
+          <footer className="w-full mb-10 sm:mb-12">
             <Button />
           </footer>
         </GameContextProvider>
