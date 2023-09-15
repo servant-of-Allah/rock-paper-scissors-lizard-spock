@@ -7,22 +7,17 @@ const GameEnd = ({ first, second }) => {
     useContext(GameContext);
   const [result, setResult] = useState("");
 
-  function updateScoreAndReturnResult(res) {
-    if (res === "win") {
+  useEffect(() => {
+    const res = calculateResult(first, second);
+      if (res === "win") {
       setLatestScore((s) => s + 1);
-      return "you win";
+      setResult("you win");
     } else if (res === "lose" && latestScore > 0) {
       setLatestScore((s) => s - 1);
-      return "you lose";
+      setResult("you lose");
     } else {
-      return "draw";
+      setResult("draw");
     }
-  }
-
-  useEffect(() => {
-    console.log({ first, second });
-    const res = calculateResult(first, second);
-    setResult(() => updateScoreAndReturnResult(res));
   }, []);
 
   return (
