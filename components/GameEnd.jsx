@@ -9,14 +9,14 @@ const GameEnd = ({ first, second }) => {
 
   useEffect(() => {
     const res = calculateResult(first, second);
-      if (res === "win") {
+    if (res === "win") {
       setLatestScore((s) => s + 1);
       setResult("you win");
     } else if (res === "lose" && latestScore > 0) {
-      setLatestScore((s) => s - 1);
-      setResult("you lose");
+        setLatestScore((s) => s - 1);
+        setResult("you lose");
     } else {
-      setResult("draw");
+        setResult("draw");
     }
   }, []);
 
