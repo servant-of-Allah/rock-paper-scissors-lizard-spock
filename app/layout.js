@@ -13,7 +13,7 @@ import { GameContextProvider } from "@/app/context/GameContext";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="w-full h-screen overflow-hidden flex flex-col items-center justify-between">
+      <body className="w-full h-full overflow-hidden flex flex-col items-center justify-between">
         <GameContextProvider>
           <header className="w-full mt-8 sm:mt-10 md:mt-12 mb-6 md:mb-10">
             <Header />
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
 
           <main>{children}</main>
 
-          <footer className="w-full mb-10 sm:mb-12">
+          <footer className="w-full mb-10">
             <Button />
           </footer>
         </GameContextProvider>
