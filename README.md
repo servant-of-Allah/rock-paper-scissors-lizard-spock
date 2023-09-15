@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution](https://your-solution-url.com)
-- Live Site URL: [Live](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/rockpaperscissorslizardspock-with-nextjs-and-tailwind-css-Qjm8B3MLw8)
+- Live Site URL: [Live](https://rock-paper-scissors-lizard-spock-rosy.vercel.app/)
 
 ## My process
 
