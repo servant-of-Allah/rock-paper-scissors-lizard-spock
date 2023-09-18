@@ -18,7 +18,7 @@ const GameEnd = ({ first, second }) => {
     } else {
         setResult("draw");
     }
-  }, []);
+  }, [first, second]);
 
   return (
     <div className="grid place-items-center gap-2 mt-[-30px] md:mt-0 order-3 md:order-2 z-50">
